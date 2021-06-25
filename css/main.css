@@ -1,0 +1,283 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: "Helvetica", sans-serif;
+
+
+
+
+}
+
+:root {
+  --main-h-color: #151515;
+  --main2-color: #927fbf;
+  --p-color: #1a1c20;
+
+}
+
+#fullpage {}
+
+
+#section0 {
+  background-color: black;
+
+}
+
+
+#section0 #header .contenedor-titulo {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+#logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  align-items: center;
+  animation: fill 0.5s ease forwards 3s;
+
+}
+
+
+@keyframes line-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fill {
+  from {
+    fill: transparent;
+  }
+
+  to {
+    fill: var(--main2-color);
+  }
+}
+
+#header p {
+  opacity: 0.9;
+  font-weight: 400;
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+  display: inline-block;
+  font-size: 2vmax;
+  width: 60%;
+  color: white;
+  padding: 1em 1.4em;
+  padding-right: 0em;
+}
+
+#header p::first-letter {
+  color: var(--main2-color);
+  text-transform: uppercase;
+  font-size: 3.2vmax;
+}
+
+
+#section1 {}
+
+.portada1 {
+  width: 100%;
+  object-fit: cover;
+
+}
+
+#section2 {}
+
+.portada2 {
+  width: 100%;
+  object-fit: cover;
+
+}
+
+
+
+
+#section3 .bg-video {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+#section4 article {}
+
+.foto_color {
+  width: 100%;
+  object-fit: cover;
+}
+
+
+
+/* Flechas Slide Clases fullpage.js */
+
+
+.fp-controlArrow.fp-next,
+.fp-controlArrow.fp-prev {
+  top: 95% !important;
+
+}
+
+.fp-controlArrow.fp-prev {
+  left: 50px !important;
+
+  border-width: 15px 15px 15px 0 !important;
+  border-color: transparent var(--main2-color) transparent transparent !important;
+}
+
+.fp-controlArrow.fp-next {
+  right: 50px !important;
+  border-width: 15px 0px 15px 15px !important;
+
+  border-color: transparent transparent transparent var(--main2-color) !important;
+}
+
+
+/* -----------------------*/
+/* Full Menu Navigation */
+/* ----------------------*/
+.menu {
+  background: black;
+  color: var(--main2-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Helvetica", sans-serif;
+  position: fixed;
+  width: 100vw;
+  min-height: 100%;
+  z-index: 100;
+  text-align: center;
+  top: 0;
+  clip-path: circle(85px at 100% 0);
+  transition: 0.7s ease all;
+  z-index: 10;
+
+}
+
+.menu.active {
+  clip-path: circle(100% at 50% 0);
+
+}
+
+.btn-open-menu {
+  cursor: pointer;
+  transition: linear 0.3s all;
+  padding: 0.3em;
+  opacity: 0.9;
+  position: fixed;
+  right: 3px;
+  top: 30px;
+  padding: 15px 15px 0px 0px;
+  z-index: 999;
+
+}
+
+.btn-open-menu:hover {
+  scale: 120%;
+}
+
+/* Full Menu Navigation Items */
+
+.items-fullmenu {
+  height: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.items-fullmenu li {
+  list-style: none;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.menu.active li {
+  animation: moving 1s ease;
+}
+
+@keyframes moving {
+  from {
+    transform: translateY(1000px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+.items-fullmenu li a {
+  text-decoration: none;
+  font-size: 2.5em;
+  letter-spacing: 1px;
+  padding: 0em 0.5em;
+
+  color: var(--main2-color);
+
+  transition: 0.2s ease all;
+}
+
+.items-fullmenu li a:hover {
+  border-radius: 20px;
+  color: white;
+}
+
+/* -----------------------*/
+/*  Clases de Fullpage.js */
+/* -----------------------*/
+
+
+#fp-nav ul li a span {
+  background: var(--main2-color) !important;
+}
+
+#fp-nav ul li .fp-tooltip {
+  color: var(--main2-color) !important;
+}
+
+
+
+/* -----------------------*/
+/*  Media Queries   */
+/* -----------------------*/
+
+@media screen and (max-width: 968px) {}
+
+
+
+
+
+@media screen and (max-width: 769px) {}
+
+
+
+
+@media screen and (max-width: 560px) {
+
+  .fp-controlArrow.fp-next,
+  .fp-controlArrow.fp-prev {
+    top: 80% !important;
+
+  }
+}
+
+
+
+
+@media screen and (max-width: 364px) {}
